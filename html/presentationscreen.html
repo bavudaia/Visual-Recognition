@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>CMPE 272 Mini Project Team #17</title>
+<script type="text/javascript">
+function checkvalue() { 
+    var mystring = document.getElementById('imageurl').value; 
+    if(!mystring.match(/\S/)) {
+        alert ("The Text input is empty");
+        return false;
+    } else {
+        return true;
+    }
+}
+</script>
+</head>
+<body background = "#303030">
+
+<div id = "header">
+<h1>Image recognition with Audio feedback</h1>
+</div>
+<div id = "q">
+<h2>Sample Images</h2>
+</div>
+<form  align = "center" onsubmit = 	"return checkvalue(this)" action="{{req._parsedUrl.pathname}}">
+<div align = "center" >
+	<img src="https://beccasheppard.files.wordpress.com/2011/09/football.jpg" height='150'/>
+    <img src="http://www.rfi.ro/sites/default/files/styles/inside_content/public/articol/scandal_meciul_astra_steaua_trei_goluri_anulate.jpg" height='150'/>  
+    <img src="http://i.onionstatic.com/onion/5056/9/original/1200.jpg" height='150'/>
+    <img src="https://www.abchomeandcommercial.com/upload/images/Bed%20Bug/bedbugs2.jpg" height='150'/>
+	<img src="http://www.tigerfdn.com/wp-content/uploads/2015/05/ever-wonderred-what-do-tigers-eat.jpg" height='150'/>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/3Falls_Niagara.jpg" height='150'/>
+
+</div>
+<div align = "center">
+	<h3>Copy above image location URL or enter any image URL<h3><br/>
+    <input type="text" class="textbox" id = "imageurl" name="imageurl"/>
+    <input type="submit" class="button button1" value="Analyze" id = "inputurl" />
+</div>
+</form>
+</body>
+</html>
+<style>
+
+#header {
+    background-color: #264a60;
+    color:white;
+    text-align:center;
+	position: relative;
+    padding:5px;
+	font-family: Gill Sans, Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+#top {
+    background: #264a60;
+    height: 72px;
+    position: relative;
+    z-index: 100;
+}
+#q {
+    background-color:#848484;
+    color:white;
+    text-align:center;
+    padding:5px;
+	font-family: Gill Sans, Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+ 
+.textbox { 
+    border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:25px; 
+    width: 275px; 
+    padding-left:10px; 
+    padding-right:10px; 
+  } 
+
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#section {
+	background-color: #808080;
+	margin: auto;
+    padding: 10px;
+}
+#i1 {
+    padding:10px;
+}
+#i2{
